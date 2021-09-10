@@ -1,5 +1,14 @@
-module.exports = {
-  reactStrictMode: true,
-  assetPrefix: '/testprefix',
- 
-}
+  module.exports = {
+   assetPrefix: '/sustainabilityAssets',
+   async redirects() {
+    return [
+      {
+        source: '/sustainabilityAssets/:slug*',
+        destination: '/:slug*', // Matched parameters can be used in the destination
+        permanent: true,
+      },
+    ]
+  },
+  };
+  
+
